@@ -1,0 +1,9 @@
+# TO SEND MAIL WITH ATTACHMENT
+
+$ol = New-Object -comObject Outlook.Application 
+$mail = $ol.CreateItem(0)  
+$Mail.Recipients.Add('mnavane3@ford.com')  
+$Mail.Subject = "Action"  
+$Mail.Body = "Test Mail"  
+$mail.Attachments.Add("C:\temp\servers.txt")
+$Mail.Send()
